@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { useTranslations } from "../../../i18n/ui";
+import { blogPosts } from "../../../data/blog";
+
+export function getStaticPaths() {
+  return blogPosts.zh.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const t = useTranslations("zh");
+---
+
+<BaseLayout lang="zh" title={post.title}>
+  <article>
+    <h1>{post.title}</h1>
+    <p><small>{post.date}</small></p>
+
+    <div class="post-hero">
+      <img src={post.image} alt={post.title} />
+    </div>
+
+    <p>{post.description}</p>
+
+    {post.content.split("\n\n").map((paragraph) => (
+      <p>{paragraph}</p>
+    ))}
+
+    <a class="back-link" href="/zh/blog">← {t("backToBlog")}</a>
+  </article>
+
+  <style>
+    .post-hero {
+      margin: 20px 0 24px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.65);
+    }
+
+    .post-hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</BaseLayout>
