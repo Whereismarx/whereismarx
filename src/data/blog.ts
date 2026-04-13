@@ -1,23 +1,15 @@
 export const blogPosts = {
   zh: [
     {
-      slug: "my-first-post",
-      title: "我的第一篇文章",
-      description: "这篇文章是用来测试的。",
+      slug: "20260413",
+      title: "技术平权：个人网站的回归意味着什么？",
+      description: "0代码基础，6个小时从零开始上线这个网站，让我们短暂回味一下千禧年的技术兴奋。",
       date: "2026-04-13",
       published: true,
-      tags: ["Astro", "i18n", "Blog"],
+      tags: ["AI", "Technology", "Blog"],
       image: "/images/blog/20260413.jpg",
       content: `
-這是我的第一篇中文文章。
-
-我正在用 Astro 建立一個雙語網站，這篇文章是用來測試文章內頁。
-
-目前我已經完成：
-- 中英文路由
-- 共用版型
-- 導覽列
-- 語言切換
+我至少四次尝试开始建立自己的个人网站，每次都出于几乎相同的原因：现有的平台已经不能满足我的某些表达需要。从最早的QQ空间人人网，到微信公众号平台，再到后来的各种碎片化媒体，我都留下了很多文字。
       `.trim(),
     },
 
@@ -25,12 +17,12 @@ export const blogPosts = {
   
   en: [
     {
-      slug: "my-first-post",
+      slug: "20260413",
       title: "My First Post",
       description: "This post is a simple test for the English blog list.",
       date: "2026-04-13",
       published: true,
-      tags: ["Astro", "i18n", "Blog"],
+      tags: ["AI", "Technology", "Blog"],
       image: "/images/blog/20260413.jpg",
       content: `
 This is my first English post.
