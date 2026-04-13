@@ -3,7 +3,7 @@ export const blogPosts = {
     {
       slug: "my-first-post",
       title: "我的第一篇文章",
-      description: "這篇文章用來測試中文部落格列表。",
+      description: "这篇文章是用来测试的。",
       date: "2026-04-13",
       published: true,
       tags: ["Astro", "i18n", "Blog"],
